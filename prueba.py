@@ -853,6 +853,7 @@ app = dash.Dash(
 app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP]
 )
+app = dash.Dash(__name__, title='Cobranza y Crédito')
 app.layout = html.Div(
     [
         dbc.Navbar(
