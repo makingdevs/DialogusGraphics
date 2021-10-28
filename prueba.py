@@ -827,6 +827,13 @@ bienestar3 = dbc.Card(
 bienestar4 = dbc.Card(
     dcc.Graph(id="Territorioesbalp", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
 )
+# Momentos de verdad --------------------------------------------------------------------------------
+verdad1 = dbc.Card(
+    dcc.Graph(id="Territoriomme", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '100%', 'float': 'left', 'display': 'inline-block'})
+)
+verdad2 = dbc.Card(
+    dcc.Graph(id="Territoriommae", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '100%', 'float': 'left', 'display': 'inline-block'})
+)
 # Componentes ---------------------------------------------------------------------------------------
 app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP]
@@ -912,6 +919,14 @@ app.layout = html.Div(
                 dbc.Tab(bienestar2, label="Satisfacción con crecimiento"),
                 dbc.Tab(bienestar3, label="Horario laboral y descansos"),
                 dbc.Tab(bienestar4, label="Balance actividades laborales y personales"),
+            ]
+        ), 
+        html.Br(),
+        html.H1(children="Momentos de verdad", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
+        dbc.Tabs(
+            [
+                dbc.Tab(verdad1, label="Mejores momentos en su estancia"),
+                dbc.Tab(verdad2, label="Momentos menos agradables en su estancia"),
             ]
         ),    
     ]
