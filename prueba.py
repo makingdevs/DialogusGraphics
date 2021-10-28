@@ -847,6 +847,33 @@ app = dash.Dash(
 
 app.layout = html.Div(
     [
+        dbc.Navbar(
+    dbc.Container(
+        [
+            html.A(
+                # Use row and col to control vertical alignment of logo / brand
+                dbc.Row(
+                    [
+                        dbc.Col(html.Img(src=dialogus, height="100%")),
+                        dbc.Col(dbc.NavbarBrand("", className="ms-2")),
+                    ],
+                    align="center",
+                    className="g-0",
+                ),
+                href="#",
+                style={"textDecoration": "none"},
+            ),
+            dbc.NavbarToggler(id="navbar-toggler", n_clicks=0),
+            dbc.Collapse(
+                id="navbar-collapse",
+                is_open=False,
+                navbar=True,
+            ),
+        ]
+    ),
+    color="#35547c",
+    dark=True,
+),
         html.H6(children = "Seleccion de usuarios", style = {"textAlign":"center", "fontSize":20}),
             html.P('Selecciona el Territorio:', className='fix_label', style={'color': 'black'}),
             dcc.Dropdown(id = 'STerritorio', multi = False, searchable= True, placeholder= 'Territorio',
