@@ -708,6 +708,7 @@ dataAreapie=dataAreapie.rename(columns={"Area":"Area","Area":"Areavalues"})
 dcomplete.rename(columns=({'Número_de_empleado:':"ID"}),inplace=True)
 dialogus="https://www.dialogus.com.mx/img/logo2.5bc0e170.png"
 imaFooter="https://www.dialogus.com.mx/img/DiaBlan.b2f429cf.svg"
+heder="file:///Users/jovanyvergara/proyectosMakingDevs/website_dialogus/src/assets/js/services/Nosotroshead.svg"
 
 
 # Demografía ----------------------------------------------------------------------------------------
@@ -872,21 +873,24 @@ app.layout = html.Div(
     dark=True,
 ),
     html.Div([
+        html.Img(src="/assets/image/Nosotroshead.svg",width="100%"),
+        html.H1("Dashboard Cobranza y Crédito", style={"color":"#0098a5"}, className="headerText"),
+        html.H5("Datos representativos de la encuesta de salida", style={"color":"#35547c"}, className="headerText2"),
+    ]),
+    html.Div([
             ],style={"textAlign":"center"}),
             html.Div([
-                html.H1("Dashboard Cobranza y Crédito", style={"color":"#0098a5"}),
             ],style={"textAlign":"center"}),
             html.Div([
-                html.H5("Datos representativos de la encuesta de salida", style={"color":"#35547c"}),
             ],style = {"textAlign":"center"}),
 
             html.H6(children = "Usuarios totales",
-                        style = {"textAlign":"center","color":"#35547c", "fontSize":20,"margin-bottom":"0px",}),
+                        style = {"textAlign":"center","color":"#35547c", "fontSize":20,"margin-bottom":"0px","margin-top": "9%",}),
             html.P(f"{dcomplete.ID.value_counts().sum():,.0f}", 
                        style = {"textAlign":"center", "fontSize":20,"margin-bottom":"0px",}),
 
                        html.Div([
-            dcc.Graph(id='lineplot', #Creación componente Graph 1
+            dcc.Graph(id='lineplot',className="spaceGrafi", #Creación componente Graph 1
                     figure=px.pie(dataAreapie,values="Areavalues",names=dataAreapie.index,title="Areas encuestadas",color=dataAreapie.index,
                                   color_discrete_map={"Geografía":"#0F6040","Corporativo":"#BE3233"})),
 
