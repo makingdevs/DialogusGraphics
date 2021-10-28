@@ -706,6 +706,8 @@ dregion=dataArea.groupby(["Region"]).sum()
 dataAreapie=dcomplete.groupby("Area").agg({"Area":"count"})
 dataAreapie=dataAreapie.rename(columns={"Area":"Area","Area":"Areavalues"})
 dcomplete.rename(columns=({'Número_de_empleado:':"ID"}),inplace=True)
+dialogus="https://www.dialogus.com.mx/img/logo2.5bc0e170.png"
+imaFooter="https://www.dialogus.com.mx/img/DiaBlan.b2f429cf.svg"
 
 
 # Demografía ----------------------------------------------------------------------------------------
@@ -853,6 +855,56 @@ app = dash.Dash(
 )
 app.layout = html.Div(
     [
+        dbc.Navbar(
+    dbc.Container(
+        [
+            html.A(
+                # Use row and col to control vertical alignment of logo / brand
+                dbc.Row(
+                    [
+                        dbc.Col(html.Img(src=dialogus, height="100%")),
+                        dbc.Col(dbc.NavbarBrand("", className="ms-2")),
+                    ],
+                    align="center",
+                    className="g-0",
+                ),
+                href="#",
+                style={"textDecoration": "none"},
+            ),
+            dbc.NavbarToggler(id="navbar-toggler", n_clicks=0),
+            dbc.Collapse(
+                id="navbar-collapse",
+                is_open=False,
+                navbar=True,
+            ),
+        ]
+    ),
+    color="#35547c",
+    dark=True,
+),
+    html.Div([
+            ],style={"textAlign":"center"}),
+            html.Div([
+                html.H1("Dashboard Cobranza y Crédito", style={"color":"#0098a5"}),
+            ],style={"textAlign":"center"}),
+            html.Div([
+                html.H5("Datos representativos de la encuesta de salida", style={"color":"#35547c"}),
+            ],style = {"textAlign":"center"}),
+
+            html.H6(children = "Usuarios totales",
+                        style = {"textAlign":"center","color":"#35547c", "fontSize":20,"margin-bottom":"0px",}),
+            html.P(f"{dcomplete.ID.value_counts().sum():,.0f}", 
+                       style = {"textAlign":"center", "fontSize":20,"margin-bottom":"0px",}),
+
+                       html.Div([
+            dcc.Graph(id='lineplot', #Creación componente Graph 1
+                    figure=px.pie(dataAreapie,values="Areavalues",names=dataAreapie.index,title="Areas encuestadas",color=dataAreapie.index,
+                                  color_discrete_map={"Geografía":"#0F6040","Corporativo":"#BE3233"})),
+
+        ]),
+        html.Br(),
+        html.P(id="button-clicks"),
+        
         html.H6(children = "Seleccion de usuarios", style = {"textAlign":"center", "fontSize":20}),
             html.P('Selecciona el Territorio:', className='fix_label', style={'color': 'black'}),
             dcc.Dropdown(id = 'STerritorio', multi = False, searchable= True, placeholder= 'Territorio',
@@ -935,6 +987,11 @@ app.layout = html.Div(
                 dbc.Tab(verdad2, label="Momentos menos agradables en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
             ]
         ),    
+         html.Footer([
+        html.Img(src=imaFooter,height="20%",id=imaFooter,  style={"background":"#5b5d5e", "width":"20%"}),
+        html.H4("contactanos@dialogus.com.mx"),
+        html.H5("All Rights Reserved © 2021 | Dialogus Consultores"),
+        ],style={"background":"#5b5d5e", "color":"#FFFFFF", "textAlign":"center"})
     ]
 )
 
