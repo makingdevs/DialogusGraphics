@@ -1231,7 +1231,7 @@ app.layout = html.Div([
                 dcc.Graph(id="Regioneua")
             ],style={'width': '33%', 'float': 'left', 'display': 'inline-block'}),
             html.Div([
-                dcc.Graph(id="Regioncene")
+                dcc.Graph(id="Regioneua")
             ],style={'width': '33%', 'float': 'left', 'display': 'inline-block'}),
             html.Div([
                 dcc.Graph(id="Regioncmce")
