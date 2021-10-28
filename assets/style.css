@@ -22,3 +22,47 @@
   color: #ffffff;
   background-color: #0098a5;
 }
+#navbar-toggler{
+  display: none;
+}
+.headerText {
+  margin-top: -18%;
+  margin-left: 7%;
+  font-size: xxx-large;
+}
+.headerText2{
+  margin-left: 10%;
+  font-size: 150%;
+}
+.spaceGrafi{
+  margin-top:1%;
+}
+
+@media screen and (max-width: 1230px) {
+  .headerText{
+    font-size: 207%
+  }
+  .headerText2{
+    margin-left: 7%;
+    font-size: 140%;
+  }
+}
+@media screen and (max-width: 861px) {
+  .headerText{
+    font-size: 155%
+  }
+  .headerText2{
+    margin-left: 7%;
+    font-size: 104%;
+  }
+}
+@media screen and (max-width: 662px) {
+  .headerText{
+    font-size: 155%;
+    margin-top: -2%;
+  }
+  .headerText2{
+    margin-left: 7%;
+    font-size: 104%;
+  }
+}
