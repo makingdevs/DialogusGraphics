@@ -837,23 +837,11 @@ verdad2 = dbc.Card(
     dcc.Graph(id="Territoriommae", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '100%', 'float': 'left', 'display': 'inline-block'})
 )
 # Componentes ---------------------------------------------------------------------------------------
-app = dash.Dash(
-    external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP]
-)
-app = dash.Dash(
-    external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.FONT_AWESOME]
-)
-app = dash.Dash(
-    external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP]
-)
-app = dash.Dash(
-    external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.FONT_AWESOME]
-)
 
 app = dash.Dash(
-    external_stylesheets=[dbc.themes.BOOTSTRAP]
+    external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP],
+    title='Cobranza y Crédito'
 )
-app = dash.Dash(__name__, title='Cobranza y Crédito')
 app.layout = html.Div(
     [
         dbc.Navbar(
