@@ -1,5 +1,8 @@
 import dash
+<<<<<<< HEAD
 from dash.html.Footer import Footer
+=======
+>>>>>>> f3b6ad730120d50ae6e8a7272a992660a3a2a2b2
 import dash_bootstrap_components as dbc 
 import plotly.express as px
 import pandas as pd 
@@ -707,7 +710,10 @@ dataAreapie=dataAreapie.rename(columns={"Area":"Area","Area":"Areavalues"})
 dcomplete.rename(columns=({'Número_de_empleado:':"ID"}),inplace=True)
 
 dialogus="https://www.dialogus.com.mx/img/logo2.5bc0e170.png"
+<<<<<<< HEAD
 imaFooter="https://www.dialogus.com.mx/img/DiaBlan.b2f429cf.svg"
+=======
+>>>>>>> f3b6ad730120d50ae6e8a7272a992660a3a2a2b2
 
 app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP]
@@ -721,6 +727,7 @@ app = dash.Dash(
 )
 app.layout = html.Div(
 [
+<<<<<<< HEAD
 dbc.Navbar(
     dbc.Container(
         [
@@ -745,6 +752,14 @@ dbc.Navbar(
             ),
         ]
     ),
+=======
+dbc.NavbarSimple(
+    children=[
+        dbc.NavItem(dbc.NavLink()),
+    ],
+    brand="Dialogus",
+    brand_href="#",
+>>>>>>> f3b6ad730120d50ae6e8a7272a992660a3a2a2b2
     color="#35547c",
     dark=True,
 ),
@@ -771,11 +786,20 @@ dbc.Navbar(
         html.Br(),
         html.P(id="button-clicks"),
 
+<<<<<<< HEAD
     html.Footer([
         html.Img(src=imaFooter,height="20%",id=imaFooter,  style={"background":"#5b5d5e", "width":"20%"}),
         html.H4("contactanos@dialogus.com.mx"),
         html.H5("All Rights Reserved © 2021 | Dialogus Consultores"),
     ],style={"background":"#5b5d5e", "color":"#FFFFFF", "textAlign":"center"})
+=======
+        dbc.Card(
+    [
+        dbc.CardFooter("Dialogus"),
+    ],
+    style={"background":"#5b5d5e", "color":"white", "font-size":"xx-large", "width": "100%", "margin-top":"205px"},
+)
+>>>>>>> f3b6ad730120d50ae6e8a7272a992660a3a2a2b2
 
     ]
 )
