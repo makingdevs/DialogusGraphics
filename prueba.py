@@ -958,6 +958,11 @@ app.layout = html.Div(
                 dbc.Tab(verdad2, label="Momentos menos agradables en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
             ]
         ),    
+         html.Footer([
+        html.Img(src=imaFooter,height="20%",id=imaFooter,  style={"background":"#5b5d5e", "width":"20%"}),
+        html.H4("contactanos@dialogus.com.mx"),
+        html.H5("All Rights Reserved © 2021 | Dialogus Consultores"),
+        ],style={"background":"#5b5d5e", "color":"#FFFFFF", "textAlign":"center"})
     ]
 )
 
