@@ -814,6 +814,20 @@ salida17 = dbc.Card(
 salida18 = dbc.Card(
     dcc.Graph(id="Territoriomc", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
 )
+# Bienestar ----------------------------------------------------------------------------------------
+bienestar1 = dbc.Card(
+    dcc.Graph(id="Territoriosargs", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+)
+bienestar2 = dbc.Card(
+    dcc.Graph(id="Territorioscpgs", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+)
+bienestar3 = dbc.Card(
+    dcc.Graph(id="Territoriohdr", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+)
+bienestar4 = dbc.Card(
+    dcc.Graph(id="Territorioesbalp", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+)
+# Componentes ---------------------------------------------------------------------------------------
 app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP]
 )
@@ -889,7 +903,17 @@ app.layout = html.Div(
                 dbc.Tab(salida17, label="Ejecución impecable"),
                 dbc.Tab(salida18, label="Mejora continua"),
             ]
-        )    
+        ),
+        html.Br(),
+        html.H1(children="Bienestar", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
+        dbc.Tabs(
+            [
+                dbc.Tab(bienestar1, label="Satisfacción con actividades"),
+                dbc.Tab(bienestar2, label="Satisfacción con crecimiento"),
+                dbc.Tab(bienestar3, label="Horario laboral y descansos"),
+                dbc.Tab(bienestar4, label="Balance actividades laborales y personales"),
+            ]
+        ),    
     ]
 )
 
