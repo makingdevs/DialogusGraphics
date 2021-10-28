@@ -706,6 +706,8 @@ dregion=dataArea.groupby(["Region"]).sum()
 dataAreapie=dcomplete.groupby("Area").agg({"Area":"count"})
 dataAreapie=dataAreapie.rename(columns={"Area":"Area","Area":"Areavalues"})
 dcomplete.rename(columns=({'Número_de_empleado:':"ID"}),inplace=True)
+dialogus="https://www.dialogus.com.mx/img/logo2.5bc0e170.png"
+imaFooter="https://www.dialogus.com.mx/img/DiaBlan.b2f429cf.svg"
 
 
 # Demografía ----------------------------------------------------------------------------------------
