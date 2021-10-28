@@ -712,122 +712,122 @@ imaFooter="https://www.dialogus.com.mx/img/DiaBlan.b2f429cf.svg"
 
 # Demografía ----------------------------------------------------------------------------------------
 demografia1 = dbc.Card(
-    dcc.Graph(id="Territoriogenero", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%','width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriogenero", className='graphics')
 )
 demografia2 = dbc.Card(
-    dcc.Graph(id="Territorioedad", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territorioedad", className='graphics')
 )
 demografia3 = dbc.Card(
-    dcc.Graph(id="Territorioedocivil", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territorioedocivil", className='graphics')
 )
 demografia4 = dbc.Card(
-    dcc.Graph(id="Territoriolvlpuesto", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriolvlpuesto", className='graphics')
 )
 demografia5 = dbc.Card(
-    dcc.Graph(id="TerritorioExperiencia_en_su_último_puesto", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="TerritorioExperiencia_en_su_último_puesto", className='graphics')
 )
 # Antiguedad ----------------------------------------------------------------------------------------
 antiguedad1 = dbc.Card(
-    dcc.Graph(id="Territoriotgs", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriotgs", className='graphics')
 )
 antiguedad2 = dbc.Card(
-    dcc.Graph(id="Territoriotup", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriotup", className='graphics')
 )
 # Cultura -------------------------------------------------------------------------------------------
 cultura1 = dbc.Card(
-    dcc.Graph(id="Territoriomvgs", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriomvgs", className='graphics')
 )
 cultura2 = dbc.Card(
-    dcc.Graph(id="Territoriomvun", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriomvun", className='graphics')
 )
 cultura3 = dbc.Card(
-    dcc.Graph(id="Territorioce", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territorioce", className='graphics')
 )
 cultura4 = dbc.Card(
-    dcc.Graph(id="Territoriovyc1", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriovyc1", className='graphics')
 )
 cultura5 = dbc.Card(
-    dcc.Graph(id="Territoriopi", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriopi", className='graphics')
 )
 cultura6 = dbc.Card(
-    dcc.Graph(id="Territoriomgad", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriomgad", className='graphics')
 )
 cultura7 = dbc.Card(
-    dcc.Graph(id="Territorioh", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territorioh", className='graphics')
 )
 cultura8 = dbc.Card(
-    dcc.Graph(id="Territorioi", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territorioi", className='graphics')
 )
 cultura9 = dbc.Card(
-    dcc.Graph(id="Territorioc", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territorioc", className='graphics')
 )
 # Opciones de salida --------------------------------------------------------------------------------
 salida1 = dbc.Card(
     dcc.Graph(id="Territoriorcgs", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '100%', 'float': 'left', 'display': 'inline-block'})
 )
 salida2 = dbc.Card(
-    dcc.Graph(id="Territoriotpct", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriotpct", className='graphics')
 )
 salida3 = dbc.Card(
-    dcc.Graph(id="Territoriomtu", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriomtu", className='graphics')
 )
 salida4 = dbc.Card(
-    dcc.Graph(id="Territorioratp", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territorioratp", className='graphics')
 )
 salida5 = dbc.Card(
-    dcc.Graph(id="Territorioatp", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territorioatp", className='graphics')
 )
 salida6 = dbc.Card(
-    dcc.Graph(id="Territoriorpvp", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriorpvp", className='graphics')
 )
 salida7 = dbc.Card(
-    dcc.Graph(id="Territorioaspao", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territorioaspao", className='graphics')
 )
 salida8 = dbc.Card(
-    dcc.Graph(id="Territorioeua", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territorioeua", className='graphics')
 )
 salida9 = dbc.Card(
-    dcc.Graph(id="Territoriocene", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriocene", className='graphics')
 )
 salida10 = dbc.Card(
-    dcc.Graph(id="Territoriocmce", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriocmce", className='graphics')
 )
 salida11 = dbc.Card(
-    dcc.Graph(id="Territoriotec", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriotec", className='graphics')
 )
 salida12 = dbc.Card(
-    dcc.Graph(id="Territoriopcc", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriopcc", className='graphics')
 )
 salida13 = dbc.Card(
-    dcc.Graph(id="Territoriohonestidad", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriohonestidad", className='graphics')
 )
 salida14 = dbc.Card(
-    dcc.Graph(id="Territoriolealtad", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriolealtad", className='graphics')
 )
 salida15 = dbc.Card(
-    dcc.Graph(id="Territoriocyrm", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriocyrm", className='graphics')
 )
 salida16 = dbc.Card(
-    dcc.Graph(id="Territorioppc", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territorioppc", className='graphics')
 )
 salida17 = dbc.Card(
-    dcc.Graph(id="Territorioei", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territorioei", className='graphics')
 )
 salida18 = dbc.Card(
-    dcc.Graph(id="Territoriomc", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriomc", className='graphics')
 )
 # Bienestar ----------------------------------------------------------------------------------------
 bienestar1 = dbc.Card(
-    dcc.Graph(id="Territoriosargs", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriosargs", className='graphics')
 )
 bienestar2 = dbc.Card(
-    dcc.Graph(id="Territorioscpgs", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territorioscpgs", className='graphics')
 )
 bienestar3 = dbc.Card(
-    dcc.Graph(id="Territoriohdr", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territoriohdr", className='graphics')
 )
 bienestar4 = dbc.Card(
-    dcc.Graph(id="Territorioesbalp", style={'margin-left': 'auto', 'margin-right': 'auto', 'width': '33%', 'float': 'left', 'display': 'inline-block'})
+    dcc.Graph(id="Territorioesbalp", className='graphics')
 )
 # Momentos de verdad --------------------------------------------------------------------------------
 verdad1 = dbc.Card(
@@ -893,49 +893,73 @@ app.layout = html.Div(
         ]),
         html.Br(),
         html.P(id="button-clicks"),
-        
+
+# Selección1 -----------------------------------------------------------------------------------------
+
         html.H6(children = "Seleccion de usuarios", style = {"textAlign":"center", "fontSize":20}),
             html.P('Selecciona el Territorio:', className='fix_label', style={'color': 'black'}),
             dcc.Dropdown(id = 'STerritorio', multi = False, searchable= True, placeholder= 'Territorio',
                          options= [{'label': c, 'value': c}
                             for c in (datagraph.index.unique("Territorio"))], className='dcc_compon'),
+# Renglon1 ------------------------------------------------------------------------------------------      
         html.Br(),
-        html.I(className="fas fa-angle-double-right text-warning"),
-        html.H1( children="Demografía", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
-        dbc.Tabs(
+        dbc.Row(
             [
-                dbc.Tab(demografia1, label="Género", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(demografia2, label="Edad", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(demografia3, label="Estado civil", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(demografia4, label="Nivel de puestos", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(demografia5, label="Experiencia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                dcc.Graph(id="Territorioprgsaf")
             ]
         ),
+# Renglon2 ------------------------------------------------------------------------------------------      
         html.Br(), 
-        html.H1(children="Antiguedad", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
-        dbc.Tabs(
+        dbc.Row(
             [
-                dbc.Tab(antiguedad1, label="Tiempo en GS", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(antiguedad2, label="Tiempo en su último puesto", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                dbc.Col(html.Div
+                ([
+                    html.H1( children="Demografía", className='titles'),
+                    html.Br(),
+                    dbc.Tabs
+                    ([
+                        dbc.Tab(demografia1, label="Género", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(demografia2, label="Edad", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(demografia3, label="Estado civil", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(demografia4, label="Nivel de puestos", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(demografia5, label="Experiencia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                    ]),
+                ])),
+                dbc.Col(html.Div
+                ([
+                    html.H1(children="Antiguedad", className='titles'),
+                    html.Br(),
+                    dbc.Tabs
+                    ([
+                            dbc.Tab(antiguedad1, label="Tiempo en GS", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                            dbc.Tab(antiguedad2, label="Tiempo en su último puesto", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                    ]),
+                ])),
             ]
         ),
-        html.Br(),
-        html.H1(children="Cultura", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
-        dbc.Tabs(
+# Renglon3 ------------------------------------------------------------------------------------------
+        html.Br(), 
+        dbc.Row(
             [
-                dbc.Tab(cultura1, label="Misión y visión en GS", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(cultura2, label="Misión y visión de tu unidad de negocios", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(cultura3, label="Código de ética", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(cultura4, label="Valores y comportamiento", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(cultura5, label="Prosperidad incluyente", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(cultura6, label="Gestión de alto desempeño", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(cultura7, label="Honestel", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(cultura8, label="Ideas", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(cultura9, label="Cuéntanos", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                html.H1(children="Cultura", className='titles'),
+                html.Br(),
+                dbc.Tabs
+                    ([
+                        dbc.Tab(cultura1, label="Misión y visión en GS", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(cultura2, label="Misión y visión de tu unidad de negocios", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(cultura3, label="Código de ética", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(cultura4, label="Valores y comportamiento", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(cultura5, label="Prosperidad incluyente", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(cultura6, label="Gestión de alto desempeño", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(cultura7, label="Honestel", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(cultura8, label="Ideas", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(cultura9, label="Cuéntanos", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                    ]),
             ]
         ),
+# Renglon4 ------------------------------------------------------------------------------------------
         html.Br(),
-        html.H1(children="Opciones de salida", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
+        html.H1(children="Opciones de salida", className='titles'),
         dbc.Tabs(
             [
                 dbc.Tab(salida1, label="Razón", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -958,6 +982,7 @@ app.layout = html.Div(
                 dbc.Tab(salida18, label="Mejora continua", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
             ]
         ),
+# Renglon5 ------------------------------------------------------------------------------------------        
         html.Br(),
         html.H1(children="Bienestar", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
         dbc.Tabs(
@@ -968,6 +993,7 @@ app.layout = html.Div(
                 dbc.Tab(bienestar4, label="Balance actividades laborales y personales", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
             ]
         ), 
+# Renglon6 ------------------------------------------------------------------------------------------
         html.Br(),
         html.H1(children="Momentos de verdad", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
         dbc.Tabs(
@@ -975,11 +1001,28 @@ app.layout = html.Div(
                 dbc.Tab(verdad1, label="Mejores momentos en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
                 dbc.Tab(verdad2, label="Momentos menos agradables en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
             ]
-        ),    
-         html.Footer([
+        ),
+# Cuartel ------------------------------------------------------------------------------------------
+        html.Br(),
+        html.P('Seleccione Cuartel:', className='fix_label', style={'color': 'black'}),
+            dcc.Dropdown(id = 'SCuartel',
+                         multi = False,
+                         searchable= True,
+                         placeholder= 'Cuartel',
+                         options= [], className='dcc_compon'),
+        html.Br(),
+        dbc.Row(
+            [
+                dcc.Graph(id="Cuartelprgsaf")
+            ]
+        ),
+
+# Footer --------------------------------------------------------------------------------------------            
+        html.Footer([
         html.Img(src=imaFooter,height="20%",id=imaFooter,  style={"background":"#5b5d5e", "width":"20%"}),
         html.H4("contactanos@dialogus.com.mx"),
         html.H5("All Rights Reserved © 2021 | Dialogus Consultores"),
+        html.Br(),
         ],style={"background":"#5b5d5e", "color":"#FFFFFF", "textAlign":"center"})
     ]
 )
