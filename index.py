@@ -1141,7 +1141,7 @@ app.layout = html.Div(
                     dbc.Col(html.Div
                     ([
                          html.Br(),html.Br(),html.Br(),
-                        html.Img(src="/assets/image/que es.jpeg", className="logo"),
+                        html.Img(src="/assets/image/quees.jpeg", className="logo"),
                     ])),
                     dbc.Col(html.Div
                     ([
