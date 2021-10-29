@@ -1283,9 +1283,11 @@ app.layout = html.Div(
                         dbc.Tab(verdad2, label="Momentos menos agradables en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
                     ]
                 ),
+                html.Br(),
             ],style={"margin-left":"50px", "margin-right":"50px"},
         ), 
 # Cuartel ------------------------------------------------------------------------------------------
+html.Div([
         html.Br(),
         html.H2('Seleccione Cuartel:', className='fix_label'),
             dcc.Dropdown(id = 'SCuartel',
@@ -1298,7 +1300,7 @@ app.layout = html.Div(
         dbc.Row(
             [
                 dcc.Graph(id="Cuartelprgsaf")
-            ],style={"margin-left":"50px", "margin-right":"50px"},
+            ],style={"margin-left":"50px", "margin-right":"50px", "background-color":"#f8f9fa"},
         ),
 # Renglon2 ------------------------------------------------------------------------------------------      
         html.Br(), 
@@ -1327,7 +1329,7 @@ app.layout = html.Div(
                             dbc.Tab(antiguedadc2, label="Tiempo en su último puesto", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
                     ]),
                 ])),
-            ],style={"margin-left":"50px", "margin-right":"50px"},
+            ],style={"margin-left":"50px", "margin-right":"50px", "background-color":"#f8f9fa"},
         ),
  # Renglon3 ------------------------------------------------------------------------------------------
         html.Br(), 
@@ -1410,8 +1412,10 @@ app.layout = html.Div(
                         dbc.Tab(verdadc2, label="Momentos menos agradables en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
                     ]
                 ),
+                html.Br(),
             ],style={"margin-left":"50px", "margin-right":"50px"},
-        ), 
+        ),
+],style = {"background-color":"#f8f9fa"}), 
 # Región --------------------------------------------------------------------------------------------
         html.Br(),
         html.H2('Seleccione Región:', className='fix_label'),
@@ -1537,6 +1541,7 @@ app.layout = html.Div(
                         dbc.Tab(verdadr2, label="Momentos menos agradables en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
                     ]
                 ),
+                html.Br(),
             ],style={"margin-left":"50px", "margin-right":"50px"},
         ),                             
 # Footer --------------------------------------------------------------------------------------------            
