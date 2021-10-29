@@ -1146,8 +1146,10 @@ app.layout = html.Div(
                     dbc.Col(html.Div
                     ([
                         html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),
+                        html.H1( children="Areas Encuestadas", className='titles marginTitle'),
+                        html.Hr(className="line1"),
                         html.H6(children = "Usuarios totales", className="marginrow",
-                        style = {"textAlign":"center","color":"#35547c", "fontSize":20,"margin-bottom":"0px","margin-top": "9%",}),
+                        style = {"textAlign":"center","color":"#35547c", "fontSize":20,"margin-bottom":"0px",}),
                         html.P(f"{dcomplete.ID.value_counts().sum():,.0f}", 
                         style = {"textAlign":"center", "fontSize":20,"margin-bottom":"0px",}),
                          html.Div([
