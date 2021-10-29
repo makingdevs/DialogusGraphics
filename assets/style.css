@@ -78,6 +78,39 @@
   margin-left: 50px;
 }
 
+.line1{
+  border-style: Solid;
+  border-color: #ffd41f;
+  background-color: #ffd41f;
+  border-width: 3px;
+  margin: auto;
+  width: 300px;
+  opacity: inherit;
+  margin-bottom: 30px;
+}
+
+.line2{
+  border-style: Solid;
+  border-color: #ffd41f;
+  background-color: #ffd41f;
+  border-width: 3px;
+  margin: auto;
+  width: 450px;
+  opacity: inherit;
+  margin-bottom: 30px;
+}
+
+.line3{
+  border-style: Solid;
+  border-color: #ffd41f;
+  background-color: #ffd41f;
+  border-width: 3px;
+  margin: auto;
+  width: 200px;
+  opacity: inherit;
+  margin-bottom: 30px;
+}
+
 .dcc_compon{
   color: #0098a5;
   margin-left: 50px;
