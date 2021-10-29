@@ -1181,7 +1181,7 @@ app.layout = html.Div(
                 dbc.Col(html.Div
                 ([
                     html.H1( children="Demografía", className='titles'),
-                    html.Br(),
+                    html.Hr(className="line1"),
                     dbc.Tabs
                     ([
                         dbc.Tab(demografia1, label="Género", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -1194,7 +1194,7 @@ app.layout = html.Div(
                 dbc.Col(html.Div
                 ([
                     html.H1(children="Antiguedad", className='titles'),
-                    html.Br(),
+                    html.Hr(className="line1"),
                     dbc.Tabs
                     ([
                             dbc.Tab(antiguedad1, label="Tiempo en GS", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -1208,7 +1208,7 @@ app.layout = html.Div(
         dbc.Row(
             [
                 html.H1(children="Cultura", className='titles'),
-                html.Br(),
+                html.Hr(className="line3"),
                 dbc.Tabs
                     ([
                         dbc.Tab(cultura1, label="Misión y visión en GS", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -1227,8 +1227,8 @@ app.layout = html.Div(
         html.Br(),
         dbc.Row(
             [
-                html.Br(),
                 html.H1(children="Opciones de salida", className='titles'),
+                html.Hr(className="line2"),
                 dbc.Tabs(
                     [
                         dbc.Tab(salida1, label="Razón", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -1259,6 +1259,7 @@ app.layout = html.Div(
             [
                 html.Br(),
                 html.H1(children="Bienestar", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
+                html.Hr(className="line1"),
                 dbc.Tabs(
                     [
                         dbc.Tab(bienestar1, label="Satisfacción con actividades", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -1275,6 +1276,7 @@ app.layout = html.Div(
             [
                 html.Br(),
                 html.H1(children="Momentos de verdad", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
+                html.Hr(className="line2"),
                 dbc.Tabs(
                     [
                         dbc.Tab(verdad1, label="Mejores momentos en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -1305,7 +1307,7 @@ app.layout = html.Div(
                 dbc.Col(html.Div
                 ([
                     html.H1( children="Demografía", className='titles'),
-                    html.Br(),
+                    html.Hr(className="line1"),
                     dbc.Tabs
                     ([
                         dbc.Tab(demografiac1, label="Género", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -1318,7 +1320,7 @@ app.layout = html.Div(
                 dbc.Col(html.Div
                 ([
                     html.H1(children="Antiguedad", className='titles'),
-                    html.Br(),
+                    html.Hr(className="line1"),
                     dbc.Tabs
                     ([
                             dbc.Tab(antiguedadc1, label="Tiempo en GS", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -1332,7 +1334,7 @@ app.layout = html.Div(
         dbc.Row(
             [
                 html.H1(children="Cultura", className='titles'),
-                html.Br(),
+                html.Hr(className="line3"),
                 dbc.Tabs
                     ([
                         dbc.Tab(culturac1, label="Misión y visión en GS", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -1353,6 +1355,7 @@ app.layout = html.Div(
             [
                 html.Br(),
                 html.H1(children="Opciones de salida", className='titles'),
+                html.Hr(className="line2"),
                 dbc.Tabs(
                     [
                         dbc.Tab(salidac1, label="Razón", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -1383,6 +1386,7 @@ app.layout = html.Div(
             [
                 html.Br(),
                 html.H1(children="Bienestar", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
+                html.Hr(className="line1"),
                 dbc.Tabs(
                     [
                         dbc.Tab(bienestarc1, label="Satisfacción con actividades", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -1399,6 +1403,7 @@ app.layout = html.Div(
             [
                 html.Br(),
                 html.H1(children="Momentos de verdad", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
+                html.Hr(className="line2"),
                 dbc.Tabs(
                     [
                         dbc.Tab(verdadc1, label="Mejores momentos en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -1429,7 +1434,7 @@ app.layout = html.Div(
                 dbc.Col(html.Div
                 ([
                     html.H1( children="Demografía", className='titles'),
-                    html.Br(),
+                    html.Hr(className="line1"),
                     dbc.Tabs
                     ([
                         dbc.Tab(demografiar1, label="Género", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -1442,7 +1447,7 @@ app.layout = html.Div(
                 dbc.Col(html.Div
                 ([
                     html.H1(children="Antiguedad", className='titles'),
-                    html.Br(),
+                    html.Hr(className="line1"),
                     dbc.Tabs
                     ([
                             dbc.Tab(antiguedadr1, label="Tiempo en GS", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -1456,7 +1461,7 @@ app.layout = html.Div(
         dbc.Row(
             [
                 html.H1(children="Cultura", className='titles'),
-                html.Br(),
+                html.Hr(className="line3"),
                 dbc.Tabs
                     ([
                         dbc.Tab(culturar1, label="Misión y visión en GS", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -1477,6 +1482,7 @@ app.layout = html.Div(
             [
                 html.Br(),
                 html.H1(children="Opciones de salida", className='titles'),
+                html.Hr(className="line2"),
                 dbc.Tabs(
                     [
                         dbc.Tab(salidar1, label="Razón", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -1507,6 +1513,7 @@ app.layout = html.Div(
             [
                 html.Br(),
                 html.H1(children="Bienestar", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
+                html.Hr(className="line1"),
                 dbc.Tabs(
                     [
                         dbc.Tab(bienestarr1, label="Satisfacción con actividades", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
@@ -1523,6 +1530,7 @@ app.layout = html.Div(
             [
                 html.Br(),
                 html.H1(children="Momentos de verdad", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
+                html.Hr(className="line2"),
                 dbc.Tabs(
                     [
                         dbc.Tab(verdadr1, label="Mejores momentos en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
