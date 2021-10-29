@@ -1,3 +1,7 @@
+.marginrow{
+  margin-left: 50px;
+  margin-right: 50px;
+}
 
 .graphics{
   margin-left: auto;
@@ -79,7 +83,7 @@
 
 .logo{
   margin-top: 27%;
-  margin-left: 20%;
+  margin-left: 15%;
   width: 60%;
   border-radius: 10%;
 }

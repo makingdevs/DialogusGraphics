@@ -1140,12 +1140,13 @@ app.layout = html.Div(
                 [
                     dbc.Col(html.Div
                     ([
+                         html.Br(),html.Br(),html.Br(),
                         html.Img(src="/assets/image/que es.jpeg", className="logo"),
                     ])),
                     dbc.Col(html.Div
                     ([
                         html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),
-                        html.H6(children = "Usuarios totales",
+                        html.H6(children = "Usuarios totales", className="marginrow",
                         style = {"textAlign":"center","color":"#35547c", "fontSize":20,"margin-bottom":"0px","margin-top": "9%",}),
                         html.P(f"{dcomplete.ID.value_counts().sum():,.0f}", 
                         style = {"textAlign":"center", "fontSize":20,"margin-bottom":"0px",}),
@@ -1154,13 +1155,11 @@ app.layout = html.Div(
                             figure=px.pie(dataAreapie,values="Areavalues",names=dataAreapie.index,title="Areas encuestadas",color=dataAreapie.index,
                                   color_discrete_map={"Geografía":"#0F6040","Corporativo":"#BE3233"})),]),
                     ])),
-                ]
+                ],style={"margin-left":"50px", "margin-right":"50px"},
             ),
         html.Br(),
         html.P(id="button-clicks"),
-
 # Selección1 -----------------------------------------------------------------------------------------
-
         html.H1(children = "Seleccion de usuarios", className="selection"),
             html.H2('Selecciona el Territorio:', className='selection2'),
             dcc.Dropdown(id = 'STerritorio',
@@ -1171,10 +1170,9 @@ app.layout = html.Div(
                                    for c in (datagraph.index.unique("Territorio"))], className='dcc_compon'),
 # Renglon1 ------------------------------------------------------------------------------------------      
         html.Br(),
-        dbc.Row(
-            [
-                dcc.Graph(id="Territorioprgsaf")
-            ]
+        dbc.Row(dbc.Col(html.Div([
+                dcc.Graph(id="Territorioprgsaf",className="marginrow")
+            ]))
         ),
 # Renglon2 ------------------------------------------------------------------------------------------      
         html.Br(), 
@@ -1203,7 +1201,7 @@ app.layout = html.Div(
                             dbc.Tab(antiguedad2, label="Tiempo en su último puesto", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
                     ]),
                 ])),
-            ]
+            ],style={"margin-left":"50px", "margin-right":"50px"},
         ),
 # Renglon3 ------------------------------------------------------------------------------------------
         html.Br(), 
@@ -1223,53 +1221,68 @@ app.layout = html.Div(
                         dbc.Tab(cultura8, label="Ideas", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
                         dbc.Tab(cultura9, label="Cuéntanos", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
                     ]),
-            ]
+            ],style={"margin-left":"50px", "margin-right":"50px"},
         ),
 # Renglon4 ------------------------------------------------------------------------------------------
         html.Br(),
-        html.H1(children="Opciones de salida", className='titles'),
-        dbc.Tabs(
+        dbc.Row(
             [
-                dbc.Tab(salida1, label="Razón", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salida2, label="Tiempo traslado", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salida3, label="Medios de transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salida4, label="Robo o asalto en transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salida5, label="Acoso en transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salida6, label="Robo total o parcial de vehículo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salida7, label="Agresión física", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salida8, label="Extorsión", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salida9, label="Cómo encontraron su nuevo empleo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salida10, label="Características que mejoraron", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salida11, label="Compañerismo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salida12, label="Pares cumplían su trabajo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salida13, label="Honestidad", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salida14, label="Lealtad", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salida15, label="Confianza y respeto mutuo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salida16, label="Pasión por el cliente", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salida17, label="Ejecución impecable", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salida18, label="Mejora continua", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-            ]
+                html.Br(),
+                html.H1(children="Opciones de salida", className='titles'),
+                dbc.Tabs(
+                    [
+                        dbc.Tab(salida1, label="Razón", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salida2, label="Tiempo traslado", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salida3, label="Medios de transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salida4, label="Robo o asalto en transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salida5, label="Acoso en transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salida6, label="Robo total o parcial de vehículo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salida7, label="Agresión física", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salida8, label="Extorsión", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salida9, label="Cómo encontraron su nuevo empleo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salida10, label="Características que mejoraron", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salida11, label="Compañerismo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salida12, label="Pares cumplían su trabajo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salida13, label="Honestidad", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salida14, label="Lealtad", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salida15, label="Confianza y respeto mutuo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salida16, label="Pasión por el cliente", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salida17, label="Ejecución impecable", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salida18, label="Mejora continua", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                    ]
+                ),
+            ],style={"margin-left":"50px", "margin-right":"50px"},
         ),
 # Renglon5 ------------------------------------------------------------------------------------------        
         html.Br(),
-        html.H1(children="Bienestar", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
-        dbc.Tabs(
+        dbc.Row(
             [
-                dbc.Tab(bienestar1, label="Satisfacción con actividades", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(bienestar2, label="Satisfacción con crecimiento", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(bienestar3, label="Horario laboral y descansos", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(bienestar4, label="Balance actividades laborales y personales", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-            ]
+                html.Br(),
+                html.H1(children="Bienestar", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
+                dbc.Tabs(
+                    [
+                        dbc.Tab(bienestar1, label="Satisfacción con actividades", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(bienestar2, label="Satisfacción con crecimiento", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(bienestar3, label="Horario laboral y descansos", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(bienestar4, label="Balance actividades laborales y personales", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                    ]
+                ),
+            ],style={"margin-left":"50px", "margin-right":"50px"},
         ), 
 # Renglon6 ------------------------------------------------------------------------------------------
         html.Br(),
-        html.H1(children="Momentos de verdad", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
-        dbc.Tabs(
+        dbc.Row(
             [
-                dbc.Tab(verdad1, label="Mejores momentos en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(verdad2, label="Momentos menos agradables en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-            ]
-        ),
+                html.Br(),
+                html.H1(children="Momentos de verdad", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
+                dbc.Tabs(
+                    [
+                        dbc.Tab(verdad1, label="Mejores momentos en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(verdad2, label="Momentos menos agradables en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                    ]
+                ),
+            ],style={"margin-left":"50px", "margin-right":"50px"},
+        ), 
 # Cuartel ------------------------------------------------------------------------------------------
         html.Br(),
         html.H2('Seleccione Cuartel:', className='fix_label'),
@@ -1283,7 +1296,7 @@ app.layout = html.Div(
         dbc.Row(
             [
                 dcc.Graph(id="Cuartelprgsaf")
-            ]
+            ],style={"margin-left":"50px", "margin-right":"50px"},
         ),
 # Renglon2 ------------------------------------------------------------------------------------------      
         html.Br(), 
@@ -1312,7 +1325,7 @@ app.layout = html.Div(
                             dbc.Tab(antiguedadc2, label="Tiempo en su último puesto", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
                     ]),
                 ])),
-            ]
+            ],style={"margin-left":"50px", "margin-right":"50px"},
         ),
  # Renglon3 ------------------------------------------------------------------------------------------
         html.Br(), 
@@ -1332,52 +1345,67 @@ app.layout = html.Div(
                         dbc.Tab(culturac8, label="Ideas", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
                         dbc.Tab(culturac9, label="Cuéntanos", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
                     ]),
-            ]
+            ],style={"margin-left":"50px", "margin-right":"50px"},
         ),
 # Renglon4 ------------------------------------------------------------------------------------------
-        html.Br(),
-        html.H1(children="Opciones de salida", className='titles'),
-        dbc.Tabs(
+        html.Br(), 
+        dbc.Row(
             [
-                dbc.Tab(salidac1, label="Razón", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidac2, label="Tiempo traslado", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidac3, label="Medios de transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidac4, label="Robo o asalto en transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidac5, label="Acoso en transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidac6, label="Robo total o parcial de vehículo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidac7, label="Agresión física", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidac8, label="Extorsión", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidac9, label="Cómo encontraron su nuevo empleo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidac10, label="Características que mejoraron", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidac11, label="Compañerismo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidac12, label="Pares cumplían su trabajo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidac13, label="Honestidad", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidac14, label="Lealtad", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidac15, label="Confianza y respeto mutuo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidac16, label="Pasión por el cliente", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidac17, label="Ejecución impecable", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidac18, label="Mejora continua", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-            ]
-        ), 
+                html.Br(),
+                html.H1(children="Opciones de salida", className='titles'),
+                dbc.Tabs(
+                    [
+                        dbc.Tab(salidac1, label="Razón", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidac2, label="Tiempo traslado", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidac3, label="Medios de transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidac4, label="Robo o asalto en transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidac5, label="Acoso en transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidac6, label="Robo total o parcial de vehículo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidac7, label="Agresión física", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidac8, label="Extorsión", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidac9, label="Cómo encontraron su nuevo empleo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidac10, label="Características que mejoraron", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidac11, label="Compañerismo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidac12, label="Pares cumplían su trabajo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidac13, label="Honestidad", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidac14, label="Lealtad", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidac15, label="Confianza y respeto mutuo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidac16, label="Pasión por el cliente", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidac17, label="Ejecución impecable", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidac18, label="Mejora continua", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                    ]
+                ), 
+            ],style={"margin-left":"50px", "margin-right":"50px"},
+        ),
 # Renglon5 ------------------------------------------------------------------------------------------        
-        html.Br(),
-        html.H1(children="Bienestar", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
-        dbc.Tabs(
+        html.Br(), 
+        dbc.Row(
             [
-                dbc.Tab(bienestarc1, label="Satisfacción con actividades", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(bienestarc2, label="Satisfacción con crecimiento", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(bienestarc3, label="Horario laboral y descansos", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(bienestarc4, label="Balance actividades laborales y personales", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-            ]
-        ), 
+                html.Br(),
+                html.H1(children="Bienestar", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
+                dbc.Tabs(
+                    [
+                        dbc.Tab(bienestarc1, label="Satisfacción con actividades", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(bienestarc2, label="Satisfacción con crecimiento", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(bienestarc3, label="Horario laboral y descansos", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(bienestarc4, label="Balance actividades laborales y personales", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                    ]
+                ),
+            ],style={"margin-left":"50px", "margin-right":"50px"},
+        ),
 # Renglon6 ------------------------------------------------------------------------------------------
-        html.Br(),
-        html.H1(children="Momentos de verdad", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
-        dbc.Tabs(
+        html.Br(), 
+        dbc.Row(
             [
-                dbc.Tab(verdadc1, label="Mejores momentos en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(verdadc2, label="Momentos menos agradables en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-            ]
+                html.Br(),
+                html.H1(children="Momentos de verdad", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
+                dbc.Tabs(
+                    [
+                        dbc.Tab(verdadc1, label="Mejores momentos en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(verdadc2, label="Momentos menos agradables en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                    ]
+                ),
+            ],style={"margin-left":"50px", "margin-right":"50px"},
         ), 
 # Región --------------------------------------------------------------------------------------------
         html.Br(),
@@ -1392,7 +1420,7 @@ app.layout = html.Div(
         dbc.Row(
             [
                 dcc.Graph(id="Regionprgsaf")
-            ]
+            ],style={"margin-left":"50px", "margin-right":"50px"},
         ),
 # Renglon2 ------------------------------------------------------------------------------------------      
         html.Br(), 
@@ -1421,7 +1449,7 @@ app.layout = html.Div(
                             dbc.Tab(antiguedadr2, label="Tiempo en su último puesto", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
                     ]),
                 ])),
-            ]
+            ],style={"margin-left":"50px", "margin-right":"50px"},
         ),
 # Renglon3 ------------------------------------------------------------------------------------------
         html.Br(), 
@@ -1441,52 +1469,67 @@ app.layout = html.Div(
                         dbc.Tab(culturar8, label="Ideas", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
                         dbc.Tab(culturar9, label="Cuéntanos", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
                     ]),
-            ]
+            ],style={"margin-left":"50px", "margin-right":"50px"},
         ),
 # Renglon4 ------------------------------------------------------------------------------------------
-        html.Br(),
-        html.H1(children="Opciones de salida", className='titles'),
-        dbc.Tabs(
+        html.Br(), 
+        dbc.Row(
             [
-                dbc.Tab(salidar1, label="Razón", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidar2, label="Tiempo traslado", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidar3, label="Medios de transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidar4, label="Robo o asalto en transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidar5, label="Acoso en transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidar6, label="Robo total o parcial de vehículo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidar7, label="Agresión física", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidar8, label="Extorsión", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidar9, label="Cómo encontraron su nuevo empleo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidar10, label="Características que mejoraron", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidar11, label="Compañerismo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidar12, label="Pares cumplían su trabajo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidar13, label="Honestidad", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidar14, label="Lealtad", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidar15, label="Confianza y respeto mutuo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidar16, label="Pasión por el cliente", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidar17, label="Ejecución impecable", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(salidar18, label="Mejora continua", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-            ]
+                html.Br(),
+                html.H1(children="Opciones de salida", className='titles'),
+                dbc.Tabs(
+                    [
+                        dbc.Tab(salidar1, label="Razón", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidar2, label="Tiempo traslado", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidar3, label="Medios de transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidar4, label="Robo o asalto en transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidar5, label="Acoso en transporte", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidar6, label="Robo total o parcial de vehículo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidar7, label="Agresión física", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidar8, label="Extorsión", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidar9, label="Cómo encontraron su nuevo empleo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidar10, label="Características que mejoraron", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidar11, label="Compañerismo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidar12, label="Pares cumplían su trabajo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidar13, label="Honestidad", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidar14, label="Lealtad", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidar15, label="Confianza y respeto mutuo", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidar16, label="Pasión por el cliente", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidar17, label="Ejecución impecable", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(salidar18, label="Mejora continua", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                    ]
+                ),
+            ],style={"margin-left":"50px", "margin-right":"50px"},
         ),
 # Renglon5 ------------------------------------------------------------------------------------------        
-        html.Br(),
-        html.H1(children="Bienestar", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
-        dbc.Tabs(
+        html.Br(), 
+        dbc.Row(
             [
-                dbc.Tab(bienestarr1, label="Satisfacción con actividades", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(bienestarr2, label="Satisfacción con crecimiento", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(bienestarr3, label="Horario laboral y descansos", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(bienestarr4, label="Balance actividades laborales y personales", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-            ]
-        ), 
+                html.Br(),
+                html.H1(children="Bienestar", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
+                dbc.Tabs(
+                    [
+                        dbc.Tab(bienestarr1, label="Satisfacción con actividades", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(bienestarr2, label="Satisfacción con crecimiento", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(bienestarr3, label="Horario laboral y descansos", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(bienestarr4, label="Balance actividades laborales y personales", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                    ]
+                ),
+            ],style={"margin-left":"50px", "margin-right":"50px"},
+        ),
 # Renglon6 ------------------------------------------------------------------------------------------
-        html.Br(),
-        html.H1(children="Momentos de verdad", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
-        dbc.Tabs(
+        html.Br(), 
+        dbc.Row(
             [
-                dbc.Tab(verdadr1, label="Mejores momentos en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-                dbc.Tab(verdadr2, label="Momentos menos agradables en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
-            ]
+                html.Br(),
+                html.H1(children="Momentos de verdad", style={'color': '#0098a5', 'font-family': 'Poppins,sans-serif', 'font-weight': '600', 'text-align': 'center'}),
+                dbc.Tabs(
+                    [
+                        dbc.Tab(verdadr1, label="Mejores momentos en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                        dbc.Tab(verdadr2, label="Momentos menos agradables en su estancia", label_style={"color": "#ffffff"}, tab_style={"background-color": "rgb(63, 84, 121)"}, active_label_style={"background-color": "#0098a5"}),
+                    ]
+                ),
+            ],style={"margin-left":"50px", "margin-right":"50px"},
         ),                             
 # Footer --------------------------------------------------------------------------------------------            
         html.Br(),
