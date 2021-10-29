@@ -1501,6 +1501,46 @@ app.layout = html.Div(
 
 
 # Código datos gráficos ----------------------------------------------------------------------------
+################################################Graficos
+@app.callback(
+    Output("Territorioprgsaf", "figure"),
+    [Input("STerritorio","value")]
+)
+def actualizar(STerritorio):
+    dterritoriosentimental=dterritorio.loc[[STerritorio]]
+    a= round((((dterritoriosentimental[" 10 prgsaf"][0]+dterritoriosentimental[" 9 prgsaf"][0])-
+        (dterritoriosentimental[" 0 prgsaf"][0]+dterritoriosentimental[" 1 prgsaf"][0] +
+       dterritoriosentimental[" 2 prgsaf"][0]+dterritoriosentimental[" 3 prgsaf"][0] +
+       dterritoriosentimental[" 4 prgsaf"][0]+dterritoriosentimental[" 5 prgsaf"][0] + 
+       dterritoriosentimental[" 6 prgsaf"][0]))/((dterritoriosentimental[" 0 prgsaf"][0]+dterritoriosentimental[" 1 prgsaf"][0] +
+       dterritoriosentimental[" 2 prgsaf"][0]+dterritoriosentimental[" 3 prgsaf"][0] +
+       dterritoriosentimental[" 4 prgsaf"][0]+dterritoriosentimental[" 5 prgsaf"][0] + 
+       dterritoriosentimental[" 6 prgsaf"][0])+dterritoriosentimental[" 7 prgsaf"][0]+dterritoriosentimental[" 8 prgsaf"][0] +
+       dterritoriosentimental[" 9 prgsaf"][0]+dterritoriosentimental[" 10 prgsaf"][0]))*100)
+    fig = go.Figure(go.Indicator(
+        mode = "gauge+number+delta",
+        value = a,
+        domain = {'x': [0, 1], 'y': [0, 1]},
+        title = {'text': "Recomendarian grupo salinas", 'font': {'size': 24}},
+        delta = {'reference': 30, 'increasing': {'color': "RebeccaPurple"}},
+        gauge = {
+            'axis': {'range': [0, 100], 'tickwidth': 1, 'tickcolor': "darkblue"},
+            'bar': {'color': "darkblue"},
+            'bgcolor': "white",
+            'borderwidth': 2,
+            'bordercolor': "gray",
+            'steps': [
+                {'range': [0, 10], 'color': 'orange'},
+                {'range': [10, 30], 'color': 'green'},
+                {'range': [30, 100], 'color': 'blue'}],
+            'threshold': {
+                'line': {'color': "red", 'width': 4},
+                'thickness': 0.75,
+                'value': a}}))
+
+    fig.update_layout(paper_bgcolor = "lavender", font = {'color': "darkblue", 'family': "Arial"})
+    return fig
+
 @app.callback(
     Output("Territoriogenero", "figure"),
     [Input("STerritorio","value")]
